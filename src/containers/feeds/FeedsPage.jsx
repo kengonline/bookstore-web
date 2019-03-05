@@ -1,26 +1,18 @@
 import React, { Component } from 'react';
 import moment from 'moment';
-import styled from 'styled-components';
 
 // Services
 import { addRouter } from 'src/services/router.service';
 
 // Components
 import Layout from 'src/components/layout/Layout';
-import ContentBox from "src/components/layout/ContentBox";
 import LoadingScreen from "src/components/loading/LoadingScreen";
 import FeedCriteria from "src/components/feed/FeedCriteria";
 import FeedListWithLoadMore from "src/components/feed/FeedListWithLoadMore";
 
 // Mock data
 import Feeds from 'src/mock-data/feeds.json'
-
-const CriteriaBox = styled(ContentBox)`
-    & {
-        margin-bottom: 12px;
-    }
-`
-
+import CriteriaBox from "src/components/layout/CriteriaBox";
 
 class FeedsPage extends Component {
     static configRoute() {
