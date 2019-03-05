@@ -20,11 +20,11 @@ class ErrorPage extends Component {
 
     render() {
         return (
-            <Layout {...this.props} style={{ backgroundColor: 'white' }}>
-                <Row style={{ marginTop: '15vh', textAlign: 'center' }}>
+            <Layout {...this.props}>
+                <Row style={{ textAlign: "center" }}>
                     Something went wrong.
                 </Row>
-                <Row style={{ marginTop: '15vh', textAlign: 'center' }}>
+                <Row style={{ textAlign: "center" }}>
                     Please contact administrator.
                 </Row>
             </Layout>

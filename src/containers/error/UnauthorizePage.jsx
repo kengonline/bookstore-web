@@ -21,7 +21,7 @@ class UnauthorizePage extends Component {
                     <Row>
                         <Col style={{ display: 'inline-flex' }}>
                             <div style={{ fontSize: 50, fontWeight: 'bold', paddingTop: 100, color: '#007fff' }}>
-                                Uh, oh..! 403
+                                HTTP Status 403
                             </div>
                         </Col>
                     </Row>

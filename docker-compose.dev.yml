@@ -1,23 +1,27 @@
-version: '3'
+version: "3"
 
 services:
   bookstore-web:
     image: kengonline/bookstore-web
-    build: 
+    build:
       context: .
       dockerfile: Dockerfile.dev
-    # environment:
-    #   NODE_ENV: production
+    environment:
+      # NODE_ENV: production
+      CHOKIDAR_USEPOLLING: "true"
+      REACT_APP_ENABLE_LOGGER: "true"
+      REACT_APP_API_SERVER: "http://localhost:8080/"
+      REACT_APP_RESOURCE_SERVER: "http://localhost:8080/resource"
     ports:
       - 3000:3000
     volumes:
       - .:/usr/src/app
       - /usr/src/app/node_modules/
-  tests:
-    build: 
-      context: .
-      dockerfile: Dockerfile.dev
-    volumes:
-      - .:/usr/src/app
-      - /usr/src/app/node_modules/
-    command: npm test
+  # tests:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile.dev
+  #   volumes:
+  #     - .:/usr/src/app
+  #     - /usr/src/app/node_modules/
+  #   command: npm test
