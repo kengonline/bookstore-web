@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Col, Input } from "antd";
+import { Input } from "antd";
 import _ from 'lodash'
 
 
@@ -44,9 +44,7 @@ class Searchbar extends Component {
         const { searchText } = this.state;
 
         return (
-            <Col className="searchbar" xs={24} sm={12} xl={8}>
-                <Input.Search value={searchText} onChange={this.onChange} onSearch={() => this.onSearch(searchText)} />
-            </Col>
+            <Input.Search value={searchText} onChange={this.onChange} onSearch={() => this.onSearch(searchText)} />
         );
     }
 };
